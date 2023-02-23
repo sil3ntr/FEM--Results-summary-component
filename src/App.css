@@ -20,6 +20,11 @@ h1 {
   text-align: center;
 }
 
+ @media screen and (max-width: 50rem) {
+    .container {
+      flex-direction: column;
+    }
+ }
 
 .box {
   border-radius: 1rem;
