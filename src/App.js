@@ -1,24 +1,39 @@
-import logo from './logo.svg';
 import './App.css';
+import Summary from './components/Summary';
+import data from "./data.json";
+import React from 'react';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+        <div className='container'>
+          <div className='results-box box'>
+              <h2>Your Result</h2>
+                <div className='circle'>
+                    <div className='result-score'>76</div>
+                    <div className='result-of100'>of 100</div>
+                </div>
+                <h1>Great</h1>
+                You scored higher than 65% of the people who have taken these tests.
+          </div>
+          <div className='summary-box box'>
+            <h2>Summary</h2>
+            <div className='summary-list'>
+                      {data.map((data) => 
+                          <Summary
+                              key={data.category}
+                              category={data.category}
+                              score={data.score}
+                              icon={data.icon}
+                              background={data.background}
+                      />
+                      )}
+                <button className='continue-button'>Continue</button>
+            </div>
+          </div>     
+           
+            
+            
+      </div>
   );
 }
 

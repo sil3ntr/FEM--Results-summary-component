@@ -1,38 +1,128 @@
-.App {
+* {
+  font-family: 'Hanken Grotesk', sans-serif;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: hsl(0, 0%, 100%)
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 100%);
+
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+.box {
+  border-radius: 1rem;
+  border: 0.1rem;
+  min-height: 30rem;
+  width: 23rem;
+  box-shadow: 1rem .4rem 1rem hsl(219, 34%, 85%);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.results-box{
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 0px 60px;
+
+  background: linear-gradient( hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+  color: hsl(241, 100%, 89%);
+  z-index: 2;
+}
+
+.circle {
+  display: flex;
+  flex-direction: column;
+  font-size: 4rem;
+  border-radius: 50%;
+  height: 12rem;
+  width: 12rem;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+  background: linear-gradient( hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+  color: hsl(0, 0%, 100%)
 }
 
-.App-link {
-  color: #61dafb;
+.result-of100 {
+  font-size: 1rem;
+  color: hsl(241, 100%, 89%);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.summary-box{
+  border-radius: 0rem 1rem 1rem 0;
+  background-color: hsl(0, 0%, 100%);
+  padding: 0px 30px;
+  text-align: left;
+  
+}
+
+.summary-list{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+
+.score {
+  display: flex;
+  color:hsl(224, 30%, 27%);
+}
+
+button {
+  display: flex;
+  height: 3.5rem;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button > .catagory > img {
+  justify-content: center;
+  padding-right: 10px;
+}
+
+.continue-button{
+  border-radius: 2rem;
+  justify-content: center;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(241, 100%, 89%)
+}
+
+.continue-button:hover{
+  background: linear-gradient( hsl(252, 100%, 67%),hsl(241, 81%, 54%));
+}
+
+.background-red{
+  background-color: hsla(0, 100%, 67%, 0.1);
+  color: hsl(0, 100%, 67%)
+}
+
+.background-yellow{
+  background-color: hsla(39, 100%, 56%, 0.1);
+  color: hsl(39, 100%, 56%);
+}
+
+.background-teal{
+  background-color: hsla(166, 100%, 37%,0.1);
+  color: hsl(166, 100%, 37%);
+}
+
+.background-blue{
+  background-color: hsla(234, 85%, 45%, 0.1);
+  color: hsl(234, 85%, 45%);
 }
