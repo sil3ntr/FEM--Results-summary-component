@@ -1,17 +1,18 @@
 import React from "react";
-import "../App.css";
+import "../App.scss";
 
 export default function Summary (props){
     return(
         <>
-            <button className={props.background}>
-                    <div className="catagory">
-                        <img src={props.icon}>
-                        </img>{props.category}
-                    </div>
-                    <div className="score">{props.score}<div className="result-of100">/ 100</div></div>
-                    
-            </button>
+        <ul className="">
+            <li className={props.background}>
+                    <span className="catagory">
+                        <img src={`${props.icon}`} alt={`${props.category} icon`} />
+                        {props.category}
+                    </span>
+                    <span className="score">{props.score}<span className="result-of100"> / 100</span></span>
+            </li>
+        </ul>
         </>
     )
 }

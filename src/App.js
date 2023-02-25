@@ -1,11 +1,11 @@
-import './App.css';
+import './App.scss';
 import Summary from './components/Summary';
 import data from "./data.json";
 import React from 'react';
 
 function App() {
   return (
-        <div className='container'>
+        <div className='main'>
           <div className='results-box box'>
               <h2>Your Result</h2>
                 <div className='circle'>
